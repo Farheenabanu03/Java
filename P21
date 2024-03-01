@@ -1,0 +1,23 @@
+import java.util.scanner;
+class palindromeExample
+{
+	public static void main(String args[])
+	{
+		int num,rev=0,rem;
+		scanner inscanner=new scanner(System.in);
+		System.out.println("Enter the number);
+		num=inscanner.nextInt();
+		inscanner.close();
+		int temp=num;
+		while(num!=0){
+				rem=num%10;
+				rev=(rev*10)+rem;
+				num=num/10;
+		}
+		if(temp==rev)
+		System.out.println(temp+\t"is a palindrome number");
+		else
+			System.out.println(temp+"is not a palindrome);
+	}
+}
+	  
