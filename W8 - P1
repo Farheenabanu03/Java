@@ -1,4 +1,4 @@
-package week8;
+
 public interface allowance {
 	final double dearnessAllow = 0.45;
 	final double hoseRentAllow = 0.30;
