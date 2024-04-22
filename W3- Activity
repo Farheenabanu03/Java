@@ -1,0 +1,36 @@
+public class Employee {
+    private String name;
+    private String designation;
+    
+    // Default constructor
+    public Employee() {
+        // Default values for name and designation
+        this.name = "Unknown";
+        this.designation = "Unassigned";
+    }
+    
+    // Method to set employee details
+    public void setDetails(String name, String designation) {
+        this.name = name;
+        this.designation = designation;
+    }
+    
+    // Method to display employee details
+    public void displayDetails() {
+        System.out.println("Employee Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Designation: " + designation);
+    }
+    
+    // Main method to demonstrate the Employee class
+    public static void main(String[] args) {
+        // Create an Employee object using the default constructor
+        Employee employee = new Employee();
+        
+        // Set details for the employee named "Bob" with designation "Manager"
+        employee.setDetails("Bob", "Manager");
+        
+        // Display details of the employee
+        employee.displayDetails();
+    }
+}
