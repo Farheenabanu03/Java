@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class CharacterArrayDescendingOrder {
+    public static void main(String[] args) {
+        char[] charArray = {'b', 'd', 'a', 'c', 'e'};
+        Arrays.sort(charArray);
+        reverseArray(charArray);
+        System.out.println("Characters in descending order:");
+        for (char c : charArray) {
+            System.out.println(c);
+        }
+    }
+    public static void reverseArray(char[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+        while (left < right) {
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp
+        }
+    }
+}
