@@ -1,0 +1,75 @@
+// Student.java
+public class Student {
+    private String name;
+    private int[] internals;
+
+    public Student(String name, int[] internals) {
+        this.name = name;
+        this.internals = internals;
+    }
+
+    public double calculateAverage() {
+        int sum = 0;
+        for (int mark : internals) {
+            sum += mark;
+        }
+        return (double) sum / internals.length;
+    }
+
+    // Getters and setters for name and internals
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int[] getInternals() {
+        return internals;
+    }
+
+    public void setInternals(int[] internals) {
+        this.internals = internals;
+    }
+}
+// GradeCalculator.java
+public class GradeCalculator {
+    public static String calculateGrade(double averageMarks) {
+        if (averageMarks >= 90) {
+            return "A+";
+        } else if (averageMarks >= 80) {
+            return "A";
+        } else if (averageMarks >= 70) {
+            return "B+";
+        } else if (averageMarks >= 60) {
+            return "B";
+        } else if (averageMarks >= 50) {
+            return "C+";
+        } else if (averageMarks >= 40) {
+            return "C";
+        } else {
+            return "Fail";
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        // Sample internals marks of a student
+        int[] internals = {85, 72, 90, 60, 78};
+        
+        // Create a Student object
+        Student student = new Student("John Doe", internals);
+        
+        // Calculate average marks
+        double averageMarks = student.calculateAverage();
+        
+        // Calculate grade using GradeCalculator
+        String grade = GradeCalculator.calculateGrade(averageMarks);
+        
+        // Display the result
+        System.out.println("Student Name: " + student.getName());
+        System.out.println("Average Marks: " + averageMarks);
+        System.out.println("Grade: " + grade);
+    }
+}
